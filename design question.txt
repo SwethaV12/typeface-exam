@@ -1,0 +1,23 @@
+Get the API with maximum average response time across the users.
+.....Before discussing API response time standards, it’s important to know that API response time can be measured in several ways. 
+However, the two most common are average response time and peak response time.
+Generally, APIs that are considered high-performing have an average response time between 0.1 and one second. 
+At this speed, end users will likely not experience any interruption.
+ At around one to two seconds, users begin to notice some delay. 
+Around five seconds, users will feel a significant delay and may abandon the application or website as a result.
+
+
+ Get the API with maximum average response time for each user.
+........ Method of calculating metrics gathered by each API response time test tool
+Tools Simulate the load and capture speed which can make a difference in the response time
+Extra items recorded when monitoring user loads
+Computing metrics gathered by each tool increases the response time due to high resource consumption.
+The architecture of the two tools may be different
+
+Get error percentage of each API in buckets of 1 hours for 24 hours.
+......
+The leaky bucket algorithm is most applicable in scenarios where, along with rate limiting, we are trying to do some traffic shaping.
+
+
+
+

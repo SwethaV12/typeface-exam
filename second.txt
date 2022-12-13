@@ -1,0 +1,24 @@
+def phonetics(token):
+    token = token.upper()
+    soundex = ""
+    soundex += token[0]
+    dictionary = {"BFPV": "1", "CGJKQSXZ":"2", "DT":"3", "L":"4", "MN":"5", "R":"6", "AEIOUHWY":"."}
+
+    for char in token[1:]:
+        for key in dictionary.keys():
+            if char in key:
+                code = dictionary[key]
+                if code != soundex[-1]:
+                    soundex += code
+
+    soundex = soundex.replace(".", "")
+    soundex = soundex[:4].ljust(4, "0")
+        
+    return soundex
+
+
+description:
+
+Reducing a word to its base form using Stemming and Lemmatization is a part of the technique called Canonicalisation. 
+Stemming tries to reduce a word to its root form. Lemmatization tries to reduce a word to its lemma. 
+The root and the lemma are nothing but the base forms of the inflected words. just that the method is different in both.
